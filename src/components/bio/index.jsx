@@ -100,7 +100,7 @@ export const Bio = () => {
           transition={{
             duration: 1,
           }}
-          className="flex space-x-6 py-2 md:text-justify"
+          className="flex space-x-6 py-2 md:text-justify items-start"
         >
           <h3 className="font-bold text-[18px] tracking-wide flex items-center justify-center">
             1996{" "}
@@ -123,7 +123,7 @@ export const Bio = () => {
           transition={{
             duration: 2,
           }}
-          className="flex space-x-6 py-2"
+          className="flex space-x-6 py-2 items-start"
         >
           <h3 className="font-bold text-[18px] tracking-wide flex items-center justify-center">
             2018
@@ -205,7 +205,7 @@ export const Bio = () => {
           transition={{
             duration: 4,
           }}
-          className="flex space-x-6 py-2"
+          className="flex space-x-6 py-2 items-start"
         >
           <h3 className="font-bold text-[18px] tracking-wide flex items-center justify-center">
             2020
@@ -246,7 +246,7 @@ export const Bio = () => {
           transition={{
             duration: 4,
           }}
-          className="flex space-x-6 py-2"
+          className="flex space-x-6 py-2 items-start"
         >
           <h3 className="font-bold text-[18px] tracking-wide flex items-center justify-center">
             2022
