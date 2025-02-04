@@ -50,14 +50,11 @@ const Model = () => {
 
     if (isValid && !isValidShake) {
       emailjs
-        .sendForm(
-          "service_yxiw7ax",
-          "template_avi314q",
-          form.current,
-          "XHSSBxZdySRRRHoOV"
-        )
+        .sendForm("service_d5wbodo", "template_iglgt6c", form.current, {
+          publicKey: "P2LqfAXtE-PJoYNVt",
+        })
         .then(
-          (result) => {
+          () => {
             setUser({ ...initialData });
             setToggleModel(false);
             toast.success("🦄 Message sent successfully!");
