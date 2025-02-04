@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { ThemeContext } from "../../context/theme";
-import Avatar from "../hero/avatar";
 
 const Skill = () => {
   const { theme } = useContext(ThemeContext);

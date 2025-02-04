@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useContext } from "react";
 import { MdClose } from "react-icons/md";
 import { ModelContext } from "../../context/model";
 import { ThemeContext } from "../../context/theme";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
 import { toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
@@ -41,8 +40,26 @@ const Model = () => {
     setIsValid(validateEmail(user.email));
   };
 
-  const handleSubmit = (e) => {
+  const handleFormSubmit = (e) => {
     e.preventDefault();
+
+    // emailjs.init({
+    //   publicKey: "P2LqfAXtE-PJoYNVt",
+    //   // Do not allow headless browsers
+    //   blockHeadless: true,
+    //   blockList: {
+    //     // Block the suspended emails
+    //     list: ["foo@emailjs.com", "bar@emailjs.com"],
+    //     // The variable contains the email address
+    //     watchVariable: "userEmail",
+    //   },
+    //   limitRate: {
+    //     // Set the limit rate for the application
+    //     id: "app",
+    //     // Allow 1 request per 10s
+    //     throttle: 10000,
+    //   },
+    // });
 
     if (!user.name || !user.email || !user.message) {
       return null;
@@ -51,7 +68,7 @@ const Model = () => {
     if (isValid && !isValidShake) {
       emailjs
         .sendForm("service_d5wbodo", "template_iglgt6c", form.current, {
-          publicKey: "P2LqfAXtE-PJoYNVt",
+          publicKey: "gKJAYVB1Dp1Y8Xfyj",
         })
         .then(
           () => {
@@ -60,6 +77,7 @@ const Model = () => {
             toast.success("🦄 Message sent successfully!");
           },
           (error) => {
+            console.log(error.text);
             toast(error.text);
           }
         );
@@ -98,7 +116,7 @@ const Model = () => {
             </div>
             <form
               ref={form}
-              onSubmit={handleSubmit}
+              onSubmit={handleFormSubmit}
               className="flex flex-col items-start w-full"
             >
               <label htmlFor="" className="my-2 text-md text-gray-600">

@@ -1,8 +1,6 @@
 import React from "react";
 import { useContext } from "react";
 import { ThemeContext } from "../../context/theme";
-
-import avatar from "../../assets/images/manjesh1.jpg";
 import cat from "../../assets/images/laptop.gif";
 import { RiArrowRightSFill } from "react-icons/ri";
 import { useInView } from "react-intersection-observer";
@@ -150,7 +148,6 @@ const About = () => {
           <AnimatePresence>
             <motion.div
               variants={container}
-             
               animate={inView ? "show" : "hidden"}
               className="md:w-96 w-full grid grid-cols-2 gap-1 my-2"
             >

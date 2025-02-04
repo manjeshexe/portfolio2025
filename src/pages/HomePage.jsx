@@ -13,8 +13,6 @@ import { ModelContext } from "../context/model";
 import { AnimatePresence } from "framer-motion";
 import { ToastContainer } from "react-toastify";
 import AnimateAura from "../utils/AnimateAura";
-import Skill from "../components/skill";
-import { Bio } from "../components/bio";
 
 const HomePage = () => {
   const { toggleModel } = useContext(ModelContext);
