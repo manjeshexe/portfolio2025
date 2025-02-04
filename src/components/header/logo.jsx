@@ -10,7 +10,7 @@ const Logo = () => {
         theme === "light" ? " text-blue-600" : " text-[#FF0063]"
       }`}
     >
-      mkhembrom.dev
+      mkhembrom.in
     </a>
   );
 };

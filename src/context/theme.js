@@ -8,7 +8,7 @@ export const ThemeContextProvider = ({ children }) => {
   const [activeTab, setActiveTab] = useState("Home");
 
   const [theme, setTheme] = useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "dark"
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
   const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
   const toggleTheme = () => {

@@ -13,7 +13,7 @@ const Avatar = () => {
         transition={{
           duration: 0.1,
         }}
-        className={`cursor-pointer shape w-72 h-72 border-4 overflow-hidden bg-gradient-to-br from-[#FF0063] to-[#2D2E32] object-cover ${
+        className={`cursor-pointer shape w-72 h-72 border-4 overflow-hidden bg-gradient-to-br from-[#FF0063] to-[#2D2E32] object-cover transition-all brightness-50 hover:brightness-100 ${
           theme === "light"
             ? "hover:border-blue-600 border-[#2D2E32] border-6"
             : `hover:border-[#FF0063] border-white border-6`

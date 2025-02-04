@@ -58,21 +58,21 @@ const Nav = () => {
                 onClick={toggleTheme}
                 className="rounded-md text-sm flex items-center"
               >
-                {theme === "light" ? (
-                  <img
-                    className="drop-shadow"
-                    height={24}
-                    width={24}
-                    src={sun}
-                    alt="sun"
-                  />
-                ) : (
+                {theme === "dark" ? (
                   <img
                     className="drop-shadow"
                     height={24}
                     width={24}
                     src={moon}
                     alt="moon"
+                  />
+                ) : (
+                  <img
+                    className="drop-shadow"
+                    height={24}
+                    width={24}
+                    src={sun}
+                    alt="sun"
                   />
                 )}
               </button>

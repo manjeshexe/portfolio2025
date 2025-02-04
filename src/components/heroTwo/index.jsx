@@ -30,7 +30,7 @@ const HeroTwo = () => {
           <div className="overflow-hidden">
             <motion.h1
               initial={{ opacity: 0, y: 100 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+              animate={inView && { opacity: 1, y: 0 }}
               transition={{
                 duration: 1,
               }}
@@ -46,7 +46,7 @@ const HeroTwo = () => {
           <div className="overflow-hidden">
             <motion.h1
               initial={{ opacity: 0, y: -200 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 1, y: -200 }}
+              animate={inView && { opacity: 1, y: 0 }}
               transition={{
                 duration: 0.8,
               }}
@@ -61,7 +61,7 @@ const HeroTwo = () => {
           <div className="overflow-hidden">
             <motion.h1
               initial={{ opacity: 0, y: 200 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 200 }}
+              animate={inView && { opacity: 1, y: 0 }}
               transition={{
                 duration: 0.8,
               }}

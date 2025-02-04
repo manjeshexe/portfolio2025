@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
   }, []);
 
   return (
-    <div className="  w-full h-full bg-[#f7f7f7] dark:bg-[#0B192E] text-[#2d2e32] dark:text-[#f7f7f7] relative">
+    <div className="  w-full h-full bg-[#0B192E] dark:bg-[#0B192E] text-[#2d2e32] dark:text-[#0B192E] relative">
       <div
         ref={circle}
         className={`fixed h-64 w-64 rounded-full opacity-50 blur-[120px]  ${

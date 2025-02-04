@@ -51,6 +51,13 @@ const Project = () => {
     setFilterProject(filtered);
     setActive("vue");
   };
+  const flutterProject = () => {
+    const filtered = projectItem.filter(
+      (item) => item.projectType === "flutter"
+    );
+    setFilterProject(filtered);
+    setActive("flutter");
+  };
 
   const projectBtn = [
     {
@@ -68,6 +75,10 @@ const Project = () => {
     {
       name: "Vue",
       fun: nuxtProject,
+    },
+    {
+      name: "Flutter",
+      fun: flutterProject,
     },
   ];
 
@@ -133,8 +144,8 @@ const Project = () => {
                   className="
                                 cursor-pointer
                                 rounded-xl 
-                                h-[150px]
-                                md:h-[250px] 
+                                h-[180px]
+                                md:h-[230px] 
                                 w-full 
                                 drop-shadow-xl
                                 flex 
@@ -172,23 +183,25 @@ const Project = () => {
                     >
                       code
                     </motion.a>
-                    <motion.a
-                      href={item.link}
-                      target="_blank"
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      whileHover={{ scale: 1.1 }}
-                      className={
-                        "text-md md:text-sm uppercase rounded-md px-4 py-1  text-transparent group-hover:text-white group-hover:border-2 " +
-                        `${
-                          theme === "light"
-                            ? "hover:bg-blue-600 hover:border-blue-600"
-                            : "hover:bg-[#FF0063] hover:border-[#FF0063]"
-                        }`
-                      }
-                    >
-                      Live
-                    </motion.a>
+                    {item.link === "#" ? null : (
+                      <motion.a
+                        href={item.link}
+                        target="_blank"
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        whileHover={{ scale: 1.1 }}
+                        className={
+                          "text-md md:text-sm uppercase rounded-md px-4 py-1  text-transparent group-hover:text-white group-hover:border-2 " +
+                          `${
+                            theme === "light"
+                              ? "hover:bg-blue-600 hover:border-blue-600"
+                              : "hover:bg-[#FF0063] hover:border-[#FF0063]"
+                          }`
+                        }
+                      >
+                        Live
+                      </motion.a>
+                    )}
                   </div>
                 </motion.div>
               );

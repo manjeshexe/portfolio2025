@@ -13,13 +13,15 @@ import { ModelContext } from "../context/model";
 import { AnimatePresence } from "framer-motion";
 import { ToastContainer } from "react-toastify";
 import AnimateAura from "../utils/AnimateAura";
+import Skill from "../components/skill";
+import { Bio } from "../components/bio";
 
 const HomePage = () => {
   const { toggleModel } = useContext(ModelContext);
 
   return (
     <>
-      <div className="h-full relative z-10 w-full px-8 md:px-0 md:max-w-[1000px] mx-auto">
+      <div className="h-full relative z-10 w-full px-4 md:px-0 md:max-w-[1000px] mx-auto">
         <ToastContainer
           position="bottom-center"
           autoClose={5000}
@@ -38,6 +40,7 @@ const HomePage = () => {
         <Header />
         <HeroTwo />
         <About />
+        {/* <Skill /> */}
         <Project />
         <Contact />
 

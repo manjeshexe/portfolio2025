@@ -25,19 +25,16 @@ const Contact = () => {
 
   return (
     <div ref={ref} className={` w-full mx-auto py-40 `}>
-      <div
-        id="Contact"
-        className="max-w-full md:max-w-[800px] mx-auto w-full px-4 md:px-0"
-      >
+      <div id="Contact" className=" mx-auto w-full px-4 md:px-0">
         <div className="flex flex-col md:items-start">
           <h2
-            className={` text-lg uppercase font-bold underline underline-offset-8 ${
+            className={` text-2xl uppercase font-bold underline underline-offset-8 ${
               theme === "light" ? "text-blue-600 " : "text-[#FF0063] "
             } `}
           >
             Contact
           </h2>
-          <h1 className="text-2xl my-4 font-bold text-black dark:text-[#CDD7F6]">
+          <h1 className="text-2xl my-4 font-bold text-[#CDD7F6] dark:text-[#CDD7F6]">
             Don't be shy! Hit me up! 👇
           </h1>
         </div>
@@ -52,7 +49,7 @@ const Contact = () => {
                 <FaMapLocationDot size={36} />
               </div>
             </div>
-            <p className="text-md break-all text-black dark:text-[#CDD7F6]">
+            <p className="text-md break-all text-[#CDD7F6] dark:text-[#CDD7F6]">
               Bokaro Steel City, Jharkhand
               <br />
               India
@@ -68,25 +65,26 @@ const Contact = () => {
                 <HiMail size={36} />
               </div>
             </div>
-            <p className="text-md break-all text-black dark:text-[#CDD7F6]">
+            <p className="text-md break-all text-[#CDD7F6] dark:text-[#CDD7F6]">
               manjesh.hembrom@gmail.com
             </p>
           </div>
         </div>
-        <div className="flex space-x-8 my-10 flex-row justify-start w-full overflow-hidden p-2">
+        <div className="flex space-x-8 my-10 flex-row justify-center md:justify-start w-full overflow-hidden p-2">
           <motion.div
             initial={{ opacity: 0, y: 200 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 1, y: 200 }}
             transition={{
               duration: 0.5,
             }}
-            className="dark:bg-[#FF0063] bg-blue-600 translate-x-2"
+            className="dark:bg-[#FF0063] bg-blue-600 translate-x-2 rounded-2xl"
           >
             <button
               onClick={handleSubmit}
               className="
                                 px-[2rem] 
                                 py-[1rem]
+                                rounded-2xl
                                 text-blue-600 
                                 dark:text-[#FF0063] 
                                 border 
