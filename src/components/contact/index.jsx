@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { FaMapLocationDot } from "react-icons/fa6";
-import { HiMail } from "react-icons/hi";
+import { HiMail, HiPhone } from "react-icons/hi";
 import { ThemeContext } from "../../context/theme";
 import { ModelContext } from "../../context/model";
 import { motion } from "framer-motion";
@@ -67,6 +67,20 @@ const Contact = () => {
             </div>
             <p className="text-md break-all text-[#CDD7F6] dark:text-[#CDD7F6]">
               manjesh.hembrom@gmail.com
+            </p>
+          </div>
+          <div className="flex items-center justify-start md:justify-center space-x-4 mt-8">
+            <div className="h-14 w-14 md:h-20 md:w-20 rounded-full shadow-md flex items-center justify-center">
+              <div
+                className={`${
+                  theme === "light" ? "text-blue-600" : "text-[#FF0063]"
+                }`}
+              >
+                <HiPhone size={36} />
+              </div>
+            </div>
+            <p className="text-md break-all text-[#CDD7F6] dark:text-[#CDD7F6]">
+              +91-8210257585
             </p>
           </div>
         </div>
